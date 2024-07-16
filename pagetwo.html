@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Bame Community</title>
+    <link rel="stylesheet" type="text/css" href="CSSNE">
+    <a href="http://127.0.0.1:5500/index.html" target="_blank">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #009e0b;
+            color: #fff;
+            text-align: center;
+            padding: 0px;
+        }
+
+        footer {
+            background-color: #fffbfb;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 1000; /* Set a high z-index to ensure it's above other elements */
+        }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-style: italic;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .fa-coach {
+            color: #318000;
+            margin-right: 5px;
+        }
+
+        .content {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ebe81a;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        h1.main-title {
+            margin-top: 50px;
+            display: inline-block; /* Made the title an inline block */
+            position: relative;
+            font-size: 72px; /* Increased font size */
+            color: #195c1e;
+            padding: 20px; /* Adjusted padding as needed */
+            border-radius: 0px; /* Have Set border-radius for a slightly rounded corner */
+        }
+
+        /* Search bar styles */
+        form {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            text-align: right; /* Aligned text to the right within the form */
+        }
+
+        label {
+            margin-right: 10px;
+        }
+
+        input {
+            padding: 5px;
+        }
+
+        button {
+            padding: 5px 10px;
+        }
+
+        /* Image container styles */
+        .image-container {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            margin: 0 auto;
+            margin-top: 20px;
+            height: 50vh; /* have Set height to 50% of the viewport height */
+        }
+
+        .portrait-image {
+            position: relative;
+            width: 350px; /* Have set the width of the portrait image */
+            height: 109%; /* Have set the height to 100% to cover the container */
+            border-radius: 15px; /* have set border-radius for a slightly rounded corner */
+            border: 5px solid #181818; /* have set border color and width */
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .portrait-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Hover text */
+        .hover-text {
+            position: absolute;
+            bottom: 0; /* Positioned the text at the bottom of the image */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+        }
+
+        .portrait-image:hover .hover-text {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Text at the bottom */
+        .bottom-text {
+            background-color: #5fb1d2;
+            color: #050000;
+            padding: 20px;
+            border-radius: 9px;
+            margin-top: 45px;
+            font-size: 25px;
+            text-align: center;
+            white-space: nowrap; /* Prevent text from wrapping */
+            overflow: visible; /* Hide overflow content */
+        }
+
+        .bottom-text p {
+            animation: scrollText 20s linear infinite; /* Adjusted the duration as needed */
+        }
+
+        @keyframes scrollText {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        /* Navigation bar styles */
+        nav {
+            text-align: center;
+            margin-top: 10px; /* Adjusted the margin as needed */
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: #0c0c0c;
+            text-decoration: none;
+            padding: 10px 15px;
+            border: 1px solid #0c0c0c;
+            border-radius: 8px;
+            margin: 0 5px;
+            display: inline-block;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .navbar a:hover {
+            background-color: #fff;
+            color: #123;
+        }
+
+        /* Social media links styles */
+        .social-links {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="main-title">About Us</h1>
+    </header>
+
+    <!-- Navigation bar -->
+    <nav>
+        <div class="dropdown">
+            <span>Menu</span>
+            <div class="dropdown-content">
+                <a href="index.html">Home Page</a>
+                <a href="pagetwo.html">About us</a>
+                <a href="page 4.html">Activities</a>
+                <a href="pagethree.html">The Team</a>
+                <a href="pagefive.html">Enquire</a>
+                <a href="page6.html">News</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Search bar HTML -->
+    <form id="searchForm">
+        <label for="search">Search:</label>
+        <input type="text" id="search" name="search" placeholder="Enter keywords">
+        <button type="submit">Search</button>
+    </form>
+
+    <!-- Include the script tag for your external JavaScript file -->
+    <script src="scripts/javascript.js"></script>
+
+    <!-- About Us Content -->
+    
+    <section class="content">
+
+        <p>Welcome to our coaching team's official website. We are dedicated to providing quality coaching services and helping young kids achieve their goals in various sports as well as have fun and meet new people!</p>
+        <p>Our experienced team of coaches is passionate about what they do, and we strive to create a positive, supportive and fun environment for all our kids. Whether you're a beginner or an experienced, we have different activities we hope kids would enjoy and meet their needs.</p>
+        <p>Feel free to explore our website and learn more about our coaches, the activities we offer, and how your kids can get involved. If you have any questions or would like to join our coaching programs, don't hesitate to contact us on our enquiry form page.</p>
+    </section>
+
+    <!-- Image container -->
+    <section class="image-container">
+        <section class="portrait-image">
+            <img src="imagesNEWSS/sportsforkids.hok.jpg" alt="Portrait Image 1">
+            <section class="hover-text">We want to provide the best experience for your kids and allow them to develop their gross motor skills as well as interact with other young kids and just get out and be healthy and athletic! The sports provided are made accessible for all kids, whether you have special support or not. We encourage and welcome all kids to participate in sports with us.</section>
+        </section>
+        <section class="portrait-image">
+            <img src="imagesNEWSS/sportsforkids.jpg" alt="Portrait Image 2">
+            <section class="hover-text">Did you know, in football the fastest goal ever scored was in 2.8 seconds?!
+                <br>
+                Being a part of this sports club will allow your child to set goals and work towards them. Whether that may be improving their skills or winning a match, we want to create a sense of accomplishment for the kids and boost their self-confidence.
+            </section>
+        </section>
+        <section class="portrait-image">
+            <img src="imagesNEWSS/nflsport.jpg" alt="Portrait Image 3">
+            <section class="hover-text">Sports bring us together and teach us about teamwork and perseverance, and most importantly, they're a lot of fun!! The first basketball game took place in 1892 and is a very popular sport worldwide.
+                Every child is unique, find your child's interests and preferences when encouraging them to play sports with us. It's about finding the right fit and ensuring that the child has a positive and enjoyable experience.
+            </section>
+        </section>
+    </section>
+
+    <!-- Scrolling text -->
+    <section class="bottom-text">
+        <p>Every Saturday 9:30am-7:30pm We provide sporting activities for kids and young ones with additional needs.</p>
+    </section>
+
+</body>
+
+</html>
